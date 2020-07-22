@@ -47,7 +47,7 @@ steps:
     archiveFilePatterns: 'pipeline-scan-LATEST.zip'
     cleanDestinationFolder: false
 - script: |
-      java -Dpipeline.debug=true -jar pipeline-scan.jar --veracode_api_id "$(VERACODE_API_ID)" --veracode_api_key "$(VERACODE_API_KEY)" --file "verademo.war" --fail_on_severity="Very High, High" --fail_on_cwe="80"
+      java -Dpipeline.debug=true -jar pipeline-scan.jar --veracode_api_id "$(VERACODE_API_ID)" --veracode_api_key "$(VERACODE_API_KEY)" --file verademo.war --fail_on_severity="Very High, High" --fail_on_cwe="80"
   env:
     VERACODE_API_ID: $(VERACODE_API_ID)
     VERACODE_API_KEY: $(VERACODE_API_KEY)
